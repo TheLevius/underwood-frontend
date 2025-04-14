@@ -1,0 +1,23 @@
+name: Deploy to VPS
+on:
+  push:
+    branches: [ main ]
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install SSH Key
+        uses: webfactory/ssh-agent@v0.9.0
+        with:
+          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+      - name: Execute deploy commands
+        run: |
+          ssh -o StrictHostKeyChecking=no ${{ secrets.VPS_USER }}@${{ secrets.VPS_HOST }} "
+            export PATH=\"/${{ secrets.VPS_USER }}/.nvm/versions/node/v22.14.0/bin:/${{ secrets.VPS_USER }}/.local/share/pnpm:\$PATH\" &&
+            cd ${{ secrets.VPS_PATH }} &&
+            git pull origin main &&
+            pnpm install &&
+            pnpm build &&
+            pm2 restart frontend
+          "

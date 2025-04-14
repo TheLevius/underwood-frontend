@@ -19,7 +19,7 @@ body {
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  /* font-family: 'Gill Sans', 'Gill Sans MT', Arial, Helvetica, sans-serif; */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -40,3 +40,87 @@ a {
     color-scheme: dark;
   }
 }
+
+/* Gill Sans основное семейство */
+/* 
+@font-face {
+  font-family: 'GillSans';
+  src: url('/fonts/GillSansC.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'GillSans';
+  src: url('/fonts/GillSansC-Italic.woff2') format('woff2');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'GillSans';
+  src: url('/fonts/GillSansC-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'GillSans';
+  src: url('/fonts/GillSansC-BoldItalic.woff2') format('woff2');
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+} */
+
+/* Gill Sans Condensed */
+/* @font-face {
+  font-family: 'GillSansCondensed';
+  src: url('/fonts/GillSansCondC.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'GillSansCondensed';
+  src: url('/fonts/GillSansCondC-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+} */
+
+/* Специальные начертания */
+/* @font-face {
+  font-family: 'GillSans';
+  src: url('/fonts/GillSansLightC.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'GillSans';
+  src: url('/fonts/GillSansLightC-Italic.woff2') format('woff2');
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'GillSans';
+  src: url('/fonts/GillSansExtraBoldC.woff2') format('woff2');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'GillSans';
+  src: url('/fonts/GillSansCondBlackC.woff2') format('woff2');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+} */
